@@ -14,11 +14,10 @@ def fetch_and_click_links(url):
 
         # Trouver tous les liens dans la page
         links = soup.find_all('a')
-        print(links)
+        
         # Parcourir les liens et effectuer une requête GET pour chaque lien
         for link in links:
             href = link.get('href')
-            print(href)
             if href and href.startswith('http'):
                 try:
                     print(f"Accéder au lien : {href}")
